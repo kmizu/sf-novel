@@ -1,0 +1,119 @@
+site_name: Ω分岐の書庫
+site_description: 哲学的SF小説 - 全ての選択を知る存在がいたとしたら、私たちの意志に意味はあるのか
+site_author: 
+site_url: https://yourusername.github.io/sf-novel/
+
+theme:
+  name: material
+  language: ja
+  palette:
+    - scheme: default
+      primary: deep purple
+      accent: amber
+      toggle:
+        icon: material/brightness-7
+        name: ダークモードに切り替え
+    - scheme: slate
+      primary: deep purple
+      accent: amber
+      toggle:
+        icon: material/brightness-4
+        name: ライトモードに切り替え
+  features:
+    - navigation.sections
+    - navigation.expand
+    - navigation.top
+    - navigation.indexes
+    - toc.integrate
+    - search.suggest
+    - search.highlight
+  font:
+    text: Noto Sans JP
+    code: Noto Sans Mono
+
+nav:
+  - ホーム: index.md
+  - プロローグ: prologue.md
+  - 第1章 観測者の資格:
+    - 第1節 招聘: chapter1/1-1.md
+    - 第2節 地下14層への降下: chapter1/1-2.md
+    - 第3節 最初の観測: chapter1/1-3.md
+    - 第4節 分岐する私: chapter1/1-4.md
+    - 第5節 観測者の条件: chapter1/1-5.md
+  - 第2章 断罪される神:
+    - 第1節 異世界法廷: chapter2/2-1.md
+    - 第2節 原告の主張: chapter2/2-2.md
+    - 第3節 神の不在: chapter2/2-3.md
+    - 第4節 証拠としての分岐: chapter2/2-4.md
+    - 第5節 アイン＝ウルの出現: chapter2/2-5.md
+  - 第3章 自由意志の彼岸:
+    - 第1節 千の私: chapter3/3-1.md
+    - 第2節 収束する運命: chapter3/3-2.md
+    - 第3節 選択の重み: chapter3/3-3.md
+    - 第4節 決定論的恐怖: chapter3/3-4.md
+    - 第5節 意志の定義: chapter3/3-5.md
+  - 第4章 神の最終弁明:
+    - 第1節 Ωとの対話: chapter4/4-1.md
+    - 第2節 全知の苦悩: chapter4/4-2.md
+    - 第3節 偏りの発見: chapter4/4-3.md
+    - 第4節 判決前夜: chapter4/4-4.md
+    - 第5節 最後の証言: chapter4/4-5.md
+  - 最終章 選ぶもの／選ばれるもの:
+    - 第1節 再選択の時: chapter5/5-1.md
+    - 第2節 罪の自覚: chapter5/5-2.md
+    - 第3節 新たな分岐: chapter5/5-3.md
+    - 第4節 選択の意味: chapter5/5-4.md
+    - 第5節 永遠の問い: chapter5/5-5.md
+  - エピローグ: epilogue.md
+  - 付録:
+    - 世界観設定: appendix/worldview.md
+    - 登場人物: appendix/characters.md
+    - 用語集: appendix/glossary.md
+  - 作品について: about.md
+
+markdown_extensions:
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.details
+  - pymdownx.mark
+  - pymdownx.critic
+  - pymdownx.keys
+  - pymdownx.smartsymbols
+  - toc:
+      permalink: true
+      toc_depth: 3
+  - admonition
+  - attr_list
+  - md_in_html
+  - footnotes
+  - tables
+  - def_list
+
+plugins:
+  - search:
+      lang: ja
+  - minify:
+      minify_html: true
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/yourusername/sf-novel
+    - icon: fontawesome/brands/twitter
+      link: https://twitter.com/yourusername
+  
+  analytics:
+    provider: google
+    property: G-XXXXXXXXXX
+
+extra_css:
+  - stylesheets/extra.css
+
+extra_javascript:
+  - javascripts/extra.js
+
+copyright: |
+  &copy; 2024 <a href="https://github.com/yourusername"  target="_blank" rel="noopener">Your Name</a>

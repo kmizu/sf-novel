@@ -1,0 +1,67 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "omega-codex"
+version = "1.0.0"
+description = "《Ω分岐の書庫》- 哲学的SF小説のMkDocsプロジェクト"
+readme = "README.md"
+license = {text = "MIT"}
+authors = [
+    {name = "Author", email = "author@example.com"}
+]
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Intended Audience :: End Users/Desktop",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Topic :: Documentation",
+    "Topic :: Text Processing :: Markup :: Markdown",
+]
+keywords = ["mkdocs", "novel", "sf", "philosophy", "quantum"]
+requires-python = ">=3.8"
+dependencies = [
+    "mkdocs>=1.5.0",
+    "mkdocs-material>=9.0.0",
+    "mkdocs-minify-plugin>=0.7.0",
+    "mkdocs-git-revision-date-localized-plugin>=1.2.0",
+    "mkdocs-awesome-pages-plugin>=2.9.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pre-commit>=3.0.0",
+    "black>=23.0.0",
+    "isort>=5.0.0",
+    "flake8>=6.0.0",
+    "mypy>=1.0.0",
+]
+
+[project.urls]
+Homepage = "https://github.com/username/omega-codex"
+Repository = "https://github.com/username/omega-codex"
+Documentation = "https://username.github.io/omega-codex/"
+Issues = "https://github.com/username/omega-codex/issues"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["scripts*"]
+
+[tool.black]
+line-length = 88
+target-version = ['py38']
+include = '\.pyi?$'
+
+[tool.isort]
+profile = "black"
+multi_line_output = 3
+
+[tool.mypy]
+python_version = "3.8"
+warn_return_any = true
+warn_unused_configs = true
